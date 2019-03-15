@@ -29,6 +29,8 @@ function displayGameInfo(){
             var gameImage = $("<img>");
             // Setting the src attribute of the image to a property pulled off the result item
             gameImage.attr("src", results[i].images.fixed_height.url);
+            //as a still image
+            gameImage.attr("src", results[i].images.fixed_height_still.url);
 
             gameDiv.append(pRate);
             
@@ -39,6 +41,9 @@ function displayGameInfo(){
             $("#games-view").prepend(gameDiv);
         }
     });
+
+//making the state of the gifs
+    //var state = $(this).attr("data-state");
 
 }
 //function for displaying game data
